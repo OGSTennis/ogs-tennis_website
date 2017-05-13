@@ -29,9 +29,9 @@ public class MessageSenderServlet extends HttpServlet {
 	public static final String CHAMP_PRENOM = "prenomSend";
 	public static final String CHAMP_TEXT = "textSend";
 	
-	private static String USER_NAME = "siteogstennis";  // GMail user name (just the part before "@gmail.com")
-	private static String PASSWORD = "ogstennis123"; // GMail password
-	private static String RECIPIENT = "siteogstennis@gmail.com";
+	private static String USER_NAME = "xxx";  // GMail user name (just the part before "@gmail.com")
+	private static String PASSWORD = "xxx"; // GMail password
+	private static String RECIPIENT = "xxx@xxx.xxx";
 	
     public MessageSenderServlet() {
         super();
