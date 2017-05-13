@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>OGS Tennis</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+</head>
+
+<body>
+<!-- HEADER -->
+	<div th:if="${admin}==true">
+	<nav th:replace="~{common :: menuConnected}"></nav>
+	</div>
+	<div th:if="${admin}==false">
+	<nav th:replace="~{common :: menu}"></nav>
+	</div>
+<!-- MAIN -->
+	    <div class="row-container page_1">
+	    	<div class="row-content">	    	
+		    	<div class="row">
+		    		<div id="mainContent">
+		    		</br></br></br>
+		    		<div th:if="${admin}==true">	    	
+	                    <form method="post" action="PictureAddServlet" class="form-horizontal" enctype="multipart/form-data">
+					        <fieldset>
+					        <div class="form-group">
+								<label for="inputName" class="col-sm-2 control-label">Titre de l'image :</label>
+								<div class="col-sm-4">
+									<input type="text" class="form-control" name="name" id="inputName" placeholder="Nom" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputSummary" class="col-sm-2 control-label">Description :</label>
+								<div class="col-sm-4">
+									<textarea class="form-control" name="summary" id="inputSummary" placeholder="Description" maxlength="150" required></textarea>
+								</div>
+							</div>
+					    	<div class="form-group">
+								<label for="inputPicture" class="col-sm-2 control-label">Ajouter une image : </label>
+								<div class="col-sm-4">
+									<input type="file" class="form-control" name="picture" id="inputPicture" required>
+								</div>
+							</div>
+							<div class="form-group">
+						    	<div class="col-sm-offset-2 col-sm-10">
+						      		<input type="submit" class="btn btn-primary" value="Ajouter">
+						    	</div>
+						  	</div>
+						  	</fieldset>
+					  	</form>
+					  	</div>
+					  	<section class="pictureList">
+							<article class="pictureBox" th:each="picture : ${pictures}">
+								<div class="pictureTitle">
+									<div th:if="${admin}==true">
+										<p><a th:href="'deletepicture?confirm=true&id='+${picture.id}" class="btn btn-xs btn-danger pull-left" onclick="return sure();">X</a></p>	
+									</div><h3>[[${picture.name}]]</h3>
+									<!-- 
+									<p th:text="${picture.summary}" class="summary"></p> 
+									-->
+									</div>
+								<div class="pictureImg">
+									<img th:src="'picturepath?id='+${picture.id}" th:alt="'Vignette '+${picture.name}">
+									
+								</div>
+							</article>
+						</section>
+						
+				  	</div>
+		    	</div> <!-- row -->
+		    </div> <!-- row-content -->
+	    </div> <!-- row-container page1 -->
+<!-- FOOTER -->
+</br></br></br>
+<footer th:replace="~{common :: footer}"></footer>
+<!--FOOTER FIN -->    
+</body>
+<script>
+function sure(){
+	return confirm("Voulez-vous vraiment supprimer cette image ?");
+}
+</script>
+</html>

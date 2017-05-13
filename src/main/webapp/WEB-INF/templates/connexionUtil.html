@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8" />
+        <title>Connexion</title>
+        <link type="text/css" rel="stylesheet" href="css/form.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		  <script src="bootstrap/js/bootstrap.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		  <link rel="stylesheet" type="text/css" href="css/w3.css">
+		  <link rel="stylesheet" type="text/css" href="css/main.css"> 
+    </head>
+    <body>
+     <nav th:replace="~{common :: menu}"></nav>
+     </br></br></br>
+     	<form method="post">
+            <fieldset>
+                <legend>Connexion</legend>
+                <p class="lead">Vous pouvez vous connecter via ce formulaire.</p>
+
+                <label for="email">Adresse email <span class="requis">*</span></label>
+                <input type="email" id="email" name="email"size="20" maxlength="60" required/>
+                
+                <br />
+
+                <label for="motdepasse">Mot de passe <span class="requis">*</span></label>
+                <input type="password" id="mdp" name="mdp" value="" size="20" maxlength="20" required/>
+				<br />
+				
+                <input id="ajouterUtilisateur" type="submit" value="Connexion" class="btn btn-primary"/>
+                <br />
+                
+                <ul id="listOfUtilisateur"></ul>
+            </fieldset>
+        </form>
+        </br></br></br>
+        <footer th:replace="~{common :: footer}"></footer>
+    
+	</body>
+	<style>
+     	form .erreur {
+    		color: red;
+		}
+
+		form .succes {
+		    color: #090;
+		}
+	</style>
+	
+</html>

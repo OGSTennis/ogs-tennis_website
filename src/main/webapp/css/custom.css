@@ -1,0 +1,46 @@
+.pictureBox{
+    height: 300px;
+    background-color: white;
+    margin: 20px;
+    box-shadow: 0 0 5px grey;
+    position: relative;
+    padding: 5px 5px 5px 5px;
+}
+
+.pictureList .pictureBox{
+    width: 400px;
+}
+
+.pictureList .pictureBox p{
+    margin: 10px 0;
+}
+
+.pictureBox .pictureImg{
+    position: absolute;
+    bottom: 10px;
+    left : 12%;
+}
+
+.pictureBox .pictureImg img{
+    width:300px;
+	height:250px;
+	display : block;
+}
+
+.pictureBox h3{
+    margin: 0;
+    padding: 5;
+    text-align : center;
+}
+
+.pictureList {
+	margin-left: 7%;
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+
+.pictureTitle{
+	width : 100%;
+	position : absolute;
+	display : block;
+}

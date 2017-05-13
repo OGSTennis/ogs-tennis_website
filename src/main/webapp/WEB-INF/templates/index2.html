@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>OGS Tennis</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+
+<!-- Top Navbar Début -->
+	<div th:if="${admin}==true">
+	<nav th:replace="~{common :: menuConnected}"></nav>
+	</div>
+	<div th:if="${admin}==false">
+	<nav th:replace="~{common :: menu}"></nav>
+	</div>
+<!-- Top Navbar Fin -->
+
+<!-- MAIN -->
+    <div class="col-sm-9">
+        <div id="section1">
+          <div class="row-container fluid page_1">
+            <div class="row-content">
+              <div class="row">
+                  <div class="font_page1">
+                    <img class="img_font_home0" src="img/font_home001.jpg" width="99%">
+                  </div>
+                <div class="column" style="width:45%">
+                  <div class="block_presentation">
+                    <p class="lead">
+                    Apprentissage et tennis loisirs 
+                    &#201cole de tennis le mercredi et samedi après-midi 
+                    Mini tennis dès 4 ans
+                    </p>
+                  </div>
+                  <div class="block_presentation">
+<!-- Diapo Carousel 1 Début-->
+                    <div class="diapo_slide">
+                    
+                        <h1>Diapo</h1>
+
+                        <div class="w3-content w3-display-container" style="max-width:800px">
+                            <a href="galery">
+                              <img class="mySlides" src="img/002.jpg" style="width:100%">
+                              <img class="mySlides" src="img/004.jpg" style="width:100%">
+                              <img class="mySlides" src="img/003.jpg" style="width:100%">
+                            </a>
+                          <div class="w3-center w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+                            <div class="w3-left w3-padding-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                            <div class="w3-right w3-padding-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                          </div>
+                        </div>
+                    </div>
+<!-- Diapo Carousel 1 Fin-->
+                  </div>              
+              </div> <!-- column -->
+              <div class="column" style="width:45%" id="col_droite">
+                  <div class="block_presentation">
+<!-- Diapo Carousel 2 Début-->
+                   <div class="diapo_slide">
+                    
+                        <h1>Diapo</h1>
+                        <div class="w3-content w3-section" style="max-width:500px">
+                            <a href="galery">
+                              <img class="mySlides2 w3-animate-fading" src="img/006.jpg" style="width:100%">
+                              <img class="mySlides2 w3-animate-fading" src="img/007.jpg" style="width:100%">
+                              <img class="mySlides2 w3-animate-fading" src="img/008.jpg" style="width:100%">
+                              <img class="mySlides2 w3-animate-fading" src="img/009.jpg" style="width:100%">
+                            </a>
+                        </div>
+                    </div>
+<!-- Diapo Carousel 2 Fin-->
+                  </div>              
+              </div> <!-- column -->
+
+              </div> <!-- row-content -->
+            </div> <!-- row -->
+          </div> <!-- row-container page1 -->
+        </div> <!--section1 -->
+        
+        <div id="section2">
+            <div class="row-container fluid page_3">
+                <div class="row-content">
+                    <div class="row">
+                        <div class="titre_page"><h1 >Trouver un joueur</h1></div>
+                        <div class="column" style="width:35%">
+                            <div class="block_pres_joueur">
+                                <div id="formulaire">
+                                    <label for="choix_NPJ">Nom et Prénom du joueur :</label>
+                                    <input list="joueur" type="text" id="choix_joueur">
+                                    <datalist id="joueur">
+                                      <option value="Dujardin">
+                                      <option value="Philipo">
+                                      <option value="Kronisky">
+                                      <option value="Vapuloin">
+                                    </datalist>
+                                </div>
+                                <div id="formulaire">
+                                    <label for="choix_categorie">Catégorie du joueur :</label>
+                                    <input list="cat_joueur" type="text" id="choix_cat_joueur">
+                                    <datalist id="cat_joueur">
+                                      <option value="Bronze">
+                                      <option value="Argent">
+                                      <option value="Or">
+                                      <option value="Platine">
+                                      <option value="Diam's">
+                                    </datalist>
+                                </div>
+                                <button type="button" class="btn btn-success">Lancer la recherche</button>
+                            </div> <!--block_gauche-->
+                            
+                        </div> <!-- column-->
+                        <div class="column" style="width:65%" id="col_droite">
+                            
+                            <div class="column" style="width:24%">
+                                <img src="img/userH.jpg" class="img-circle" alt="Cinque Terre" width="150" height="115"> 
+                            </div>
+                            
+                            <div class="column" style="width:65%" id="col_droite">
+                                <div id="info_joueur">
+                                    <p class="lead">Info joueur</p>
+                                </div>
+                            </div>
+                            
+                            <div id="stat_joueur">
+                                    <p class="lead">Statistique</p>
+                                </div>
+                            
+                        </div> <!-- column droite-->
+                    </div> <!--row-->
+                </div> <!--row_content-->
+            </div> <!--row_container fluid-->
+        </div> <!-- Fin de Section -->
+
+        
+        <div id="section3">
+            <div class="row-container fluid page_3">
+                <div class="row-content">
+                    <div class="row">
+                        <div class="titre_page"><h1>Trouver une équipe</h1></div>
+                        <div class="column" style="width:35%">
+                            <div class="block_pres_joueur">
+                                <div id="formulaire">
+                                    <label for="choix_NPJ">Nom de l'équipe :</label>
+                                    <input list="joueur" type="text" id="choix_joueur">
+                                    <datalist id="joueur">
+                                      <option value="Dujardin">
+                                      <option value="Philipo">
+                                      <option value="Kronisky">
+                                      <option value="Vapuloin">
+                                    </datalist>
+                                    
+                                </div>
+                                <div id="formulaire">
+                                    <label for="choix_categorie">Catégorie de l'équipe :</label>
+                                    <input list="cat_joueur" type="text" id="choix_cat_joueur">
+                                    <datalist id="cat_joueur">
+                                      <option value="Bronze">
+                                      <option value="Argent">
+                                      <option value="Or">
+                                      <option value="Platine">
+                                      <option value="Diam's">
+                                    </datalist>
+                                </div>
+                                <button type="button" class="btn btn-success">Lancer la recherche</button>
+                            </div> <!--block_gauche-->
+                            
+                        </div> <!-- column-->
+                        <div class="column" style="width:65%" id="col_droite">
+                            <div class="column" style="width:80%" id="col_droite">
+                                <div id="info_equipe">
+                                    <p class="lead">Info équipe</p>
+                                </div>
+                                <div id="stat_equipe">
+                                    <p class="lead">Statistique</p>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                        </div> <!-- column droite-->
+                    </div> <!--row-->
+                </div> <!--row_content-->
+            </div> <!--row_container fluid-->
+        </div> <!-- Fin de Section -->
+        
+        
+        <div id="section2">
+            <div class="row-container fluid page_4 formation">
+                <div class="row-content">
+                  <div class="row">
+                    <div class="column col_form_minus">
+                      <div class="block_formation" style="background-image: url(img/font_formation.jpg)">
+                          <div class="titre_page"><h1>Formation</h1>
+                              <a class="btn_plan_stage"><button type="button" class="btn btn-info  btn_stage">Stage</button></a>
+                              <a class="btn_plan_entrainement"><button type="button" class="btn btn-info btn_entrainement">Entrainement</button></a>
+                              <a class="btn_plan_formation"><button type="button" class="btn btn-info btn_formation">Formation</button></a>
+                          </div>
+                            <div class="planning_stage"
+                                 >
+                                <p>Planning Stage</p>
+                            </div>
+                            <div class="planning_entrainement">
+                                  <p>Planning Entrainement</p>
+                            </div>
+                            <div class="planning_formation">
+                                  <p>Planning Formation</p>
+                            </div>
+                        </div> <!--block_formation-->
+                        <div class="block_formation_minus">
+                          <div class="titre_page"><h1>Formation</h1>
+                            </div>
+                            <div class="formation1">
+                                <div class="column"
+                                     id ="formation_minus" style="width:24%">
+                                    
+                                    <img src="img/formMini1.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150">
+                                    
+                                </div>
+                                <div class="column" id="col_droite"
+                                     style="width:70%">
+                                    <div class="description_stage">
+                                        <h2>Stage</h2>
+                                        <p class="lead"> Planning des Stages</p>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="formation2">                
+                                <div class="column"
+                                     id ="formation_minus"
+                                     style="width:24%">
+                                    
+                                    <img src="img/formMini2.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150">
+                                    
+                                </div>
+                                <div class="column description_entrainement" id="col_droite" style="width:70%">
+                                    <h2>Entrainement</h2>
+                                    <p class="lead"> Planning des entrainements</p>
+                                </div>
+                            </div>
+                            <div class="formation3">
+                                <div class="column"
+                                     id ="formation_minus" style="width:24%">
+                                    
+                                    <img src="img/formMini3.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150">
+                                    
+                                </div>
+                                <div class="column description_formation" id="col_droite" style="width:70%">
+                                    <h2>Formation</h2>
+                                    <p class="lead"> Planning des formations</p>
+                                </div>
+                            </div>
+                        </div> <!--block_formation-->
+                         
+                      </div> <!-- column-->
+                    </div> <!--row-->
+                </div> <!--row_content-->
+            </div> <!--row_container fluid-->
+        </div> <!-- Fin de Section -->
+        
+        <div id="section3">
+            <div class="row-container fluid page_5 " style="background-image: url(img/font_resultat.jpg)">
+                <div class="row-content">
+                  <div class="row">
+                      <div class="btn_reservation">
+                          
+                            <a href="https://adoc.app.fft.fr/adoc/" style="color:white; opacity1;">Reserver votre court de tennis ici</a>
+                            
+                      </div>
+                    </div> <!--row-->
+                </div> <!--row_content-->
+            </div> <!--row_container fluid-->
+        </div> <!-- Fin de Section -->
+        
+        <div id="section2">
+            <div class="row-container fluid page_5" style="background-image: url(img/font_reservation00.jpg)">
+                <div class="row-content">
+                  <div class="row">
+                      <div class="btn_reservation">
+                          
+                            <a href="https://adoc.app.fft.fr/adoc/" style="color:white; opacity1;">Voir les resultats des matchs ici</a>
+                            
+                      </div>
+                    </div> <!--row-->
+                </div> <!--row_content-->
+            </div> <!--row_container fluid-->
+        </div> <!-- Fin de Section -->
+   
+        <div id="section3">
+            <div class="row-container fluid page_6">
+                <div class="row-content">
+                  <div class="row">
+                      <div class="titre_page"><h1>Le comité</h1></div>
+                    <div class="column_comite" style="width:18%">
+                      <div class="block_comite">
+                          <p class="text-center">
+                              <figure>
+                                  <img src="img/userF.jpg" class="img-circle" alt="Cinque Terre" width="150" height="115">
+                                  <figcaption>Licorne Demer</figcaption>
+                              </figure>
+                          </p>
+                        </div> <!--block_comite-->
+                      </div> <!-- column-->
+                    <div class="column_comite" style="width:18%">
+                      <div class="block_comite">
+                          <p class="text-center">
+                            <figure>
+                                  <img src="img/userH.jpg" class="img-circle" alt="Cinque Terre" width="150" height="115">
+                                  <figcaption>Poutoux Jean</figcaption>
+                              </figure>
+                          </p>
+                        </div> <!--block_comite-->
+                      </div> <!-- column-->
+                    
+                    <div class="column_comite" style="width:18%">
+                      <div class="block_comite">
+                          <p class="text-center">
+                            <figure>
+                                  <img src="img/userF.jpg" class="img-circle" alt="Cinque Terre" width="150" height="115">
+                                  <figcaption>Licorne Demer</figcaption>
+                              </figure>
+                          </p>
+                        </div> <!--block_comite-->
+                      </div> <!-- column-->
+                      
+                      <div class="column_comite" style="width:18%">
+                      <div class="block_comite">
+                          <p class="text-center">
+                            <figure>
+                                  <img src="img/userF.jpg" class="img-circle" alt="Cinque Terre" width="150" height="115">
+                                  <figcaption>Licorne Demer</figcaption>
+                              </figure>
+                          </p>
+                        </div> <!--block_comite-->
+                      </div> <!-- column-->
+                      
+                      <div class="column_comite" style="width:18%">
+                      <div class="block_comite">
+                          <p class="text-center">
+                            <figure>
+                                  <img src="img/userF.jpg" class="img-circle" alt="Cinque Terre" width="150" height="115">
+                                  <figcaption>Licorne Demer</figcaption>
+                              </figure>
+                          </p>
+                        </div> <!--block_comite-->
+                      </div> <!-- column-->
+                    </div> <!--row-->
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="row">
+                    <div class="column_comite" style="width:18%">
+                      <div class="block_comite">
+                          <p class="text-center">
+                              <figure>
+                                  <img src="img/userH.jpg" class="img-circle" alt="Cinque Terre" width="150" height="115">
+                                  <figcaption>Licorne Demer</figcaption>
+                              </figure>
+                          </p>
+                        </div> <!--block_comite-->
+                      </div> <!-- column-->
+                    <div class="column_comite" style="width:18%">
+                      <div class="block_comite">
+                          <p class="text-center">
+                            <figure>
+                                  <img src="img/userH.jpg" class="img-circle" alt="Cinque Terre" width="150" height="115">
+                                  <figcaption>Poutoux Jean</figcaption>
+                              </figure>
+                          </p>
+                        </div> <!--block_comite-->
+                      </div> <!-- column-->
+                    
+                    <div class="column_comite" style="width:18%">
+                      <div class="block_comite">
+                          <p class="text-center">
+                            <figure>
+                                  <img src="img/userH.jpg" class="img-circle" alt="Cinque Terre" width="150" height="115">
+                                  <figcaption>Licorne Demer</figcaption>
+                              </figure>
+                          </p>
+                        </div> <!--block_comite-->
+                      </div> <!-- column-->
+                      
+                      <div class="column_comite" style="width:18%">
+                      <div class="block_comite">
+                          <p class="text-center">
+                            <figure>
+                                  <img src="img/userH.jpg" class="img-circle" alt="Cinque Terre" width="150" height="115">
+                                  <figcaption>Licorne Demer</figcaption>
+                              </figure>
+                          </p>
+                        </div> <!--block_comite-->
+                      </div> <!-- column-->
+                      
+                      <div class="column_comite" style="width:18%">
+                      <div class="block_comite">
+                          <p class="text-center">
+                            <figure>
+                                  <img src="img/userF.jpg" class="img-circle" alt="Cinque Terre" width="150" height="115">
+                                  <figcaption>Licorne Demer</figcaption>
+                              </figure>
+                          </p>
+                        </div> <!--block_comite-->
+                      </div> <!-- column-->
+                    </div> <!--row-->
+                    <div class="row button_comite">
+                        <a href="contact"><button type="button" class="btn btn-success">Devenir membre</button></a>
+                    </div>
+
+                </div> <!--row_content-->
+            </div> <!--row_container fluid-->
+        </div> <!-- section3 -->
+<!-- FOOTER -->
+<footer th:replace="~{common :: footer}"></footer>
+<!--FOOTER FIN -->
+        
+     </div> <!--col-sm-9 -->
+<!-- MAIN FIN --> 
+<script>
+//************ diapo1 **********   
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+    
+//*********** diapo2 auto **********
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides2");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 9000);    
+}
+    
+</script>
+</body>
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+.diapo_slide {
+    width:90%;
+}
+
+</style>
+</html>

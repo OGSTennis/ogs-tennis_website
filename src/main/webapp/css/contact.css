@@ -1,0 +1,169 @@
+* {margin: 0; padding: 0;}
+.body {
+  height: 100%; 
+  width: 100%;
+}
+#inline_container {
+  height: 500px; 
+  width: 100%;
+}
+#toggle_menu {
+  height: 100%; 
+  width: 20px; 
+  display: inline-block; 
+  float: left; 
+  background: lime;
+}
+#main_container {
+  height: 100%; 
+  width: 65%; 
+  display: 
+  inline-block; 
+  float: left;
+}
+#toggle {
+  height: 100%; 
+  width: 20px; 
+  display: inline-block; 
+  float:left; 
+  background: green;
+}
+
+.column{
+  display: inline-block;
+    width: auto;
+    padding-left: 25px;
+}
+
+
+.main{
+  width: 100%;
+}
+
+.block_presentation, .block_information, .block_localisation{
+  width: 90%;
+  height: 30%;
+  display: inline-block;
+  margin: 5px;
+
+}
+
+.block_information{
+    background-color: rgba(0,0,20,0.9);
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.row{
+    padding : 0px;
+    margin-top: 0px;
+}
+
+#col_droite{
+    position: absolute;
+}
+
+iframe{
+  width: 80%;
+  margin: 2%;
+}
+
+
+@media screen and (min-width: 0px) and (max-width:2000px) {
+    .footer {
+        background-color: #404040;
+        display: block;
+        padding: 5px;
+    }
+}
+.titre_footer {
+    color: white;
+}
+
+.column_sponsor {
+    display: inline-block;
+}
+.navbar {
+    margin-top:0px auto;
+}
+.navbar-left {
+    padding-left: 35px;
+    border-left : solid 1px;
+    border-color:#cccccc;
+}
+
+.glyphicon {
+    padding-right: 4px;
+}
+
+.btn-success {
+    margin-top: 15%;
+}
+address {
+    color:#cccccc;
+}
+
+.contact_footer {
+    text-decoration: underline;
+    color: #8c8c8c;
+}
+
+.mail_footer {
+    text-decoration: none;
+    color: #cccccc;
+}
+
+figure > * {
+    margin : 0 auto 0.55em;
+    display: block;
+}
+
+.block_information_footer_gauche {
+    width: 200px;
+    height: 100px;
+    margin-left: 50%;
+}
+
+.block_information_footer_droite {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    margin-left: 40%;
+}
+
+.navbar-default {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    margin-top: 10px auto;
+    border-radius: 0;
+}
+
+.col-sm-9 {
+    padding: 0px;
+    width: 100% auto;
+}
+.page_1 {
+    padding-top: 60px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.album2, .album3, .album4{
+    display: none;
+}
+
+body {
+    display: block;
+}
+
+.page_footer .row-container .row-content .colomn{
+	background-color: #404040;
+}
+
+.footer{
+	margin-bottom :0;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>OGS Tennis</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="css/contact.css">
+
+</head>
+
+<body>
+<!-- HEADER -->
+	<div th:if="${admin}==true">
+	<nav th:replace="~{common :: menuConnected}"></nav>
+	</div>
+	<div th:if="${admin}==false">
+	<nav th:replace="~{common :: menu}"></nav>
+	</div>
+<!-- MAIN -->
+	    <div class="row-container page_1">
+	    	<div class="row-content">
+		    	<div class="row">
+                    
+                    <div class="block_evnmt">
+                        <h1>Evénements à venir</h1>
+	                        <iframe src="https://calendar.google.com/calendar/embed?src=siteogstennis%40gmail.com&ctz=Europe/Paris" 
+	                        style="border: 0" width="800" height="600">
+	                        </iframe>
+                    </div>
+                    
+		    	</div> <!-- row -->
+		    </div> <!-- row-content -->
+	    </div> <!-- row-container page1 -->
+<!-- FOOTER -->
+<footer th:replace="~{common :: footer}"></footer>
+<!--FOOTER FIN -->
+
+</body>
+</html>
