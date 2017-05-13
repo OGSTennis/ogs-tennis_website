@@ -21,11 +21,11 @@ public class UtilisateurDao {
 	public DataSource getDataSource() {
 		if (dataSource == null) {
 			dataSource = new MysqlDataSource();
-			dataSource.setServerName("localhost");
-			dataSource.setPort(3306);
-			dataSource.setDatabaseName("ogs-tennis");
-			dataSource.setUser("root");
-			dataSource.setPassword("root");
+			dataSource.setServerName("xxx");
+			dataSource.setPort(0000);
+			dataSource.setDatabaseName("xxx");
+			dataSource.setUser("xxx");
+			dataSource.setPassword("xxx");
 		}
 		return dataSource;
 	}
